@@ -1,0 +1,102 @@
+:root {
+  --bg: #f6f8ff;
+  --card: #ffffff;
+  --text: #1f2937;
+  --accent: #4f46e5;
+  --subtle: #6b7280;
+}
+
+body[data-theme="midnight"] {
+  --bg: #0b1020;
+  --card: #131a2e;
+  --text: #e5e7eb;
+  --accent: #8b5cf6;
+  --subtle: #9ca3af;
+}
+
+body[data-theme="creator"] {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #e5e7eb;
+  --accent: #06b6d4;
+  --subtle: #94a3b8;
+}
+
+body[data-theme="contrast"] {
+  --bg: #000;
+  --card: #111;
+  --text: #fff;
+  --accent: #ffdd00;
+  --subtle: #d1d5db;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.topbar, .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: var(--card);
+  border-bottom: 1px solid rgba(127,127,127,.2);
+}
+.footer { border-top: 1px solid rgba(127,127,127,.2); border-bottom: none; }
+.brand { font-weight: 700; font-size: 1.1rem; }
+.controls { display: flex; gap: 10px; align-items: center; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr 340px;
+  gap: 16px;
+  padding: 16px;
+}
+.panel {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+label { display: block; margin: 10px 0; font-size: .9rem; }
+input, select, button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.subtitle { color: var(--subtle); margin-top: -8px; }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px;
+}
+.video-card {
+  padding: 10px;
+  border: 1px solid rgba(127,127,127,.25);
+  border-radius: 10px;
+}
+.video-card h4 { margin: 0 0 6px; }
+.video-card p { margin: 4px 0; font-size: .85rem; color: var(--subtle); }
+.actions { display: grid; gap: 8px; margin: 12px 0; }
+.output {
+  background: rgba(127,127,127,.12);
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 180px;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 1024px) {
+  .layout { grid-template-columns: 1fr; }
+}

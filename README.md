@@ -1,5 +1,18 @@
 # entertainment
 
-This repository contains the concept blueprint for **Fusion Tube**, an India-first video streaming and AI-powered creation platform.
+This repository now includes:
 
-- Product design document: `fusion_tube_design.md`
+- `fusion_tube_design.md`: full product blueprint for Fusion Tube.
+- `index.html`, `styles.css`, `app.js`: executable UI prototype demonstrating
+  - customizable themes,
+  - adaptive layout,
+  - explainable discovery controls,
+  - AI-assisted creator workflow.
+
+## Run locally
+
+```bash
+python3 -m http.server 4173
+```
+
+Open `http://localhost:4173` in your browser.

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fusion Tube Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="classic">
+  <header class="topbar">
+    <div class="brand">Fusion Tube</div>
+    <div class="controls">
+      <label>
+        Theme
+        <select id="themeSelect" aria-label="Theme selector">
+          <option value="classic">Classic Light</option>
+          <option value="midnight">Midnight Cinema</option>
+          <option value="creator">Creator Pro</option>
+          <option value="contrast">High Contrast</option>
+        </select>
+      </label>
+      <button id="resetFeed">Reset Feed</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel">
+      <h2>Discovery Controls</h2>
+      <label>Language
+        <select id="language">
+          <option>Hindi</option>
+          <option>English</option>
+          <option>Tamil</option>
+          <option>Telugu</option>
+        </select>
+      </label>
+      <label>Topic
+        <input id="topic" placeholder="e.g. Tech, Fitness" />
+      </label>
+      <button id="refresh">Tune Recommendations</button>
+
+      <h3>Security Highlights</h3>
+      <ul>
+        <li>Passkeys + MFA authentication</li>
+        <li>TLS 1.3 + AES-256 data protection</li>
+        <li>E2E encrypted creator collaboration</li>
+        <li>AI + human moderation pipeline</li>
+      </ul>
+    </aside>
+
+    <section class="panel feed">
+      <h2>For You</h2>
+      <p class="subtitle">Explainable recommendations powered by your preferences.</p>
+      <div id="videoGrid" class="video-grid"></div>
+    </section>
+
+    <section class="panel studio">
+      <h2>AI Creator Studio (Free)</h2>
+      <label>Video Prompt
+        <input id="prompt" placeholder="Explain UPI in 60 sec" />
+      </label>
+      <div class="actions">
+        <button id="generateScript">Generate Script</button>
+        <button id="suggestVoice">Suggest Voiceover</button>
+        <button id="suggestMusic">Suggest Music</button>
+      </div>
+      <pre id="aiOutput" class="output">Your AI-assisted storyboard appears here.</pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Fusion Tube prototype: adaptive UI, customizable themes, discovery controls, and AI creation workflow.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
